@@ -1,0 +1,30 @@
+<div id="free_pdf" class="full_row splat">
+	<h3 class="pdf">
+		Free Educators Guide:
+	</h3>
+	<div class="form">
+		<%= form_for(@email_list) do |f| %>
+			<%= render :partial => "layouts/error_block", :locals => {:obj => @email_list} %>
+			<div class="hidden">
+  			<%= text_field_tag :check %>
+			</div>
+			<div class="field">
+  			<%= f.text_field :name, :placeholder => "Name", "data-validate" => "validate(required)", :class => "round" %>
+			</div>
+			<div class="field">
+  			<%= f.text_field :email, :placeholder => "Email Address", "data-validate" => "validate(required, email)", :class => "round" %>
+			</div>
+			<div class="actions">
+  			<%= f.submit 'Subscribe', :class => "button purple_button" %>
+			</div>
+		<% end %>
+	</div>
+</div>
+
+<% content_for :javascripts do %>
+	<script>
+  	$(function() {
+  		Forms.validateFreePdf();
+  	});
+	</script>
+<% end %> 

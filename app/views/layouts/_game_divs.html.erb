@@ -1,0 +1,14 @@
+<div id="player_wrap"><div id="player"></div></div>
+<div id="game_window">
+  <% if params[:session_id] %>
+    <div id="kolaunch"></div>
+
+    <%# Testing Link to fire take_test function %>
+    <%#= link_to "Take Test", "#", :id => "take_test", :class => "button green_button", :mai => 1 %> 
+
+    <%= link_to "Close", "", :title => "Close", :class => "kolaunch_close circle_close" %>
+  <% end %>
+  <div id="inserted_game">
+
+  </div>
+</div>

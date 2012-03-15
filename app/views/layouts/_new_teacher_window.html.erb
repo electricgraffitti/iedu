@@ -1,0 +1,11 @@
+<div id="new_teacher" class="overlay simple_overlay">
+  <div class="close"></div>
+  <div class="content">
+    <h2>Congratulations, you have purchased <br/> Ko's Journey!</h2>
+    <p>As the administrator of your new <%= current_teacher.account.subscription.subscription_plan.name %> click on the blue <strong>Add a Teacher</strong> and provide the name and email address for each teacher who will be using Ko’s Journey in his or her classroom.</p>
+    <p>
+      After you enter the name of each teacher a login id and password will be assigned and an email notification will be automatically sent. With a link to direct them to the login page.<strong>
+    </p>
+    <p>If you need any assistance please <%= mail_to "support@kosjourney.com", "contact us" %> . Thank you.</p>
+  </div>
+</div>

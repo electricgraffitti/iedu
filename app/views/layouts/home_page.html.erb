@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+  <head>
+    <%= render :partial => 'layouts/application/headmeta' %>
+  </head>
+
+  <body id="application">
+  
+    <%# Flash Notice %>
+    <%= render :partial => 'layouts/flash', :locals => {:flash => flash} %>
+  
+    <%# Header %>
+    <div id="mast_header" class="content_wrapper">
+      <div id="hd" class="internal_content_wrapper">
+        <%= render :partial => "layouts/application/main_nav" %>
+        <%# if current_user %>
+          <%#= link_to "Log Out", logout_path, :method => :delete, :class => "logout button red_button" %>
+        <%# end %>
+      </div>
+    </div>
+    <%= clear %>
+  
+    <%# Main Content %>
+    <div id="mast_bd_white" class="content_wrapper">
+      <div id="ajax_status">
+        <%= image_tag "ajax-loader.gif" %>
+        Loading...
+      </div>
+      <div id="bd" class="content_wrapper">
+        <%= render :partial => 'layouts/player_divs' %>
+        <%= yield %>
+				<%= clear %>
+      </div>
+    </div>
+  
+    <%# Footer %>
+    <div id="mast_footer" class="content_wrapper">
+      <div id="ft" class="internal_content_wrapper">
+         <%= render :partial => "layouts/application/footer" %>
+      </div>
+    </div>
+    
+    <%= render :partial => "layouts/cdn_scripts" %>
+    <%= render :partial => "layouts/application/scripts" %>
+  </body>
+
+</html>

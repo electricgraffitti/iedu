@@ -1,0 +1,2 @@
+module ImagineHelper
+end

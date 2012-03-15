@@ -1,0 +1,36 @@
+<li class="sub_box <%= p.featured ? 'featured' : '' %>">
+	<ul class="plan_details">
+		<div class="bottom_hr">
+			<h5 class="pricing_header"><%= p.name %></h5>
+			<li class="price">
+				<%= number_to_currency(p.amount, :precision => 0) %> / 1 year
+			</li>
+			<li class="title">
+				<%= p.sub_title %>
+			</li>
+		</div>
+		<div class="bottom_hr top_hr">
+			<li class="counts">
+				<% if p.home_plan == true %>
+					<%= pluralize(p.teacher_count, "Parent") if p.teacher_count %><br />
+				<% else %>
+					<%= pluralize(p.teacher_count, "Teacher") if p.teacher_count %><br />
+				<% end %>
+			</li>
+			<li class="user_limit">
+				Up to <%= pluralize(p.user_limit, "Student") %>
+			</li>
+		</div>
+		<div class="top_hr">
+			<li class="price_per">
+				<% if p.sub_text.blank? %>
+					<%= number_to_currency(p.amount/p.user_limit) %> /Student
+				<% else %>
+					<%= p.sub_text %>
+				<% end %>
+			</li>
+		<li class="sign_up">
+			<%= p.featured ? plan_button(p, 'green') : plan_button(p) %>
+		</li></div>
+	</ul>
+</li>
