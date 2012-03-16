@@ -40,3 +40,5 @@ module Iedu
     config.filter_parameters += [:password]
   end
 end
+
+APPLICATION_NAME = "Imagine Education"

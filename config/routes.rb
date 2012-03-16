@@ -1,8 +1,6 @@
 Iedu::Application.routes.draw do
 
-  get "imagine/index"
-
-  # root :to => "imagine#index"
+  root :to => "imagine#index"
 
   # See how all your routes lay out with "rake routes"
 

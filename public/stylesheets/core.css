@@ -37,15 +37,8 @@ background: #998de0;
 color: #fff;
 text-shadow: none;
 }
-#player ::selection, #game_window ::selection {
-  background: black;
-  background: transparent;
-}
 :focus {
   /*border: 1px solid #7878CC;*/
-}
-#player :focus, #game_window :focus {
-  border: none;
 }
 a {
 color: #fff;
@@ -337,7 +330,7 @@ header,#content,footer {
 float: left;
 }
 html {
-  background:#fff;
+  background:#000;
 }
 html,body {
 text-align: center;

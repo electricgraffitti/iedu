@@ -1,0 +1,7 @@
+# Used for subscription emails (subscription_notifier.rb)
+app_name: Imagine Education
+from_email: scott@imagineeducation.org
+
+# Campaign Monitor API Key
+campaign_monitor_key: 85c49986ad5ed1c27386801fc8497d79
+
