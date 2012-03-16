@@ -1,0 +1,53 @@
+/************************************************************************************************************************/
+/*************************************************************************************************** GENERAL ************/
+#hd {position: relative;height: 180px;}
+#logo {position:absolute; left: 50%; margin-left:-188px;bottom: -33px; width: 375px; height: 150px; z-index: 2; text-indent: -9999em; background: transparent url(/images/common/top_bar/imagine_logo.png) 0px 0px no-repeat;}
+#bd {position: relative;height: 480px;padding: 35px 0px;}
+.bar {
+	position: absolute;
+	width: 960px;
+	height: 35px;
+	z-index: 1;
+	background: #eeeeee; /* Old browsers */
+	background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* IE10+ */
+	background: linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+}
+#top_bar.bar {
+	top: 0px; left: 0px; 
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-bottomright: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-radius: 10px 10px 0px 0px;
+	border-radius: 10px 10px 0px 0px;
+	-moz-box-shadow: 0px 1px 3px #000000;
+	-webkit-box-shadow: 0px 1px 3px #000000;
+	box-shadow: 0px 1px 3px #000000;
+	z-index: 1;
+}
+#bottom_bar.bar {
+	border-top: 1px solid #fff;
+	bottom: 0px; left: 0px;
+	-moz-border-radius-topleft: 0px;
+	-moz-border-radius-topright: 0px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-webkit-border-radius: 0px 0px 10px 10px;
+	border-radius: 0px 0px 10px 10px;
+}
+#bottom_bar.bar span#footer_logo {display:block;position: absolute; left: 50%; margin-left: -129px; width: 258px; height:35px; background: transparent url(/images/common/bottom_bar/story-footer-text.png) 0px 0px no-repeat;}
+.content_block {position: relative; width: 960px; height: 480px;}
+.footer_nav {position: relative; float:left; height: 35px;padding: 0px; margin: 0px;}
+#nav_left.footer_nav {width: 300px;}
+#nav_right.footer_nav {width: 240px; float:right;}
+.footer_nav li {position: relative; float:left; list-style-type: none; padding: 9px 10px; width: 100px;}
+.footer_nav li a {position: relative; float:left; text-decoration: none; display: block; color: #444; font-weight: 700; text-shadow: 0px 1px 0px #fff; width: 100%; text-align:center;}
+.footer_nav li a:hover {color:#0066b3;}
+#copyright {position: relative; margin: 0px auto; font-size:11px; color:#aaa; display: block; margin-top: 10px;}
+/************************************************************************************************************************/
+/*************************************************************************************************** INDEX **************/

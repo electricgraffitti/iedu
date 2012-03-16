@@ -16,34 +16,35 @@
     <%# Header %>
     <div id="mast_header" class="content_wrapper">
       <div id="hd" class="internal_content_wrapper">
-        <%= link_to "Kos Journey", root_url, :id => "logo" %>
-        <%= render :partial => "layouts/application/main_nav" %>
+        <%= link_to "Imagine Education", root_url, :id => "logo" %>
       </div>
     </div>
     <%= clear %>
   
     <%# Main Content %>
-    <div id="mast_bd_white" class="content_wrapper">
+    <div id="mast_bd" class="content_wrapper">
       <div id="ajax_status">
         <%= image_tag "ajax-loader.gif" %>
         Loading...
       </div>
       <div id="bd" class="content_wrapper">
+        <div id="top_bar" class="bar"></div>
         <%= yield %>
+        <div id="bottom_bar" class="bar">
+          <%= render :partial => "layouts/footer_nav_left" %>
+          <span id="footer_logo"></span>
+          <%= render :partial => "layouts/footer_nav_right" %>
+        </div>
     		<%= clear %>
       </div>
     </div>
   
     <%# Footer %>
     <div id="mast_footer" class="content_wrapper">
-      <div id="ft" class="internal_content_wrapper">
-        <%= render :partial => "layouts/application/footer" %>
-      </div>
+      <span id="copyright">&copy; Imagine Education 2012. All Rights Reserved</span>
     </div>
-    <%= yield :overlays %>
     <%= render :partial => "layouts/cdn_scripts" %>
     <%= render :partial => "layouts/application/scripts" %>
     <%= render :partial => "layouts/application/google_analytics" %>
   </body>
-
 </html>
