@@ -41,7 +41,7 @@
 	border-radius: 0px 0px 10px 10px;
 }
 #bottom_bar.bar span#footer_logo {display:block;position: absolute; left: 50%; margin-left: -129px; width: 258px; height:35px; background: transparent url(/images/common/bottom_bar/story-footer-text.png) 0px 0px no-repeat;}
-.content_block {position: relative; width: 960px; height: 480px;}
+.content_block {position: relative; width: 960px; height: 480px; overflow:hidden;}
 .footer_nav {position: relative; float:left; height: 35px;padding: 0px; margin: 0px;}
 #nav_left.footer_nav {width: 300px;}
 #nav_right.footer_nav {width: 240px; float:right;}

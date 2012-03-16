@@ -1,3 +1,22 @@
 <div id="index" class="content_block">
-	<%= image_tag("/images/panels/index_panel.png") %>
+	<ul id="fade_panel_wrap">
+		<li class="fade_panel">
+			<%= image_tag("/images/panels/index_panel.png") %>
+		</li>
+		<li class="fade_panel">
+			<%= image_tag("/images/panels/index_panel2.png") %>
+		</li>
+		<li class="fade_panel">
+			<%= image_tag("/images/panels/index_panel3.png") %>
+		</li>
+	</ul>
 </div>
+
+
+<% content_for :javascripts do %> 
+	<script>
+  	$(function() {
+  		PanelFader.initPanelFader();
+  	});
+	</script>
+<% end %> 

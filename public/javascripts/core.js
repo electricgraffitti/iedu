@@ -78,6 +78,42 @@ var FormFuncs = {
 
 };
 
+var PanelFader = {
+
+  initPanelFader: function() {
+    PanelFader.findPanels();
+  },
+
+  findPanels: function() {
+    var panels = $(".fade_panel");
+    PanelFader.showFirstPanel(panels);
+  },
+
+  showFirstPanel: function(panels) {
+    panels.eq(0).fadeIn();
+    PanelFader.transitionPanels(panels);
+  },
+
+  transitionPanels: function(panels) {
+    var firstPanel = panels.eq(0),
+        secondPanel = panels.eq(1);
+
+    secondPanel.delay(5000).fadeIn();
+    firstPanel.delay(5000).fadeOut(500, function() {
+      PanelFader.shiftPanels(panels, firstPanel);
+    });
+  },
+
+  shiftPanels: function(panels, firstPanel) {
+    var panelWrap = $("#fade_panel_wrap");
+
+    firstPanel.remove();
+    panelWrap.append(firstPanel);
+    PanelFader.transitionPanels(panelWrap.find(".fade_panel"));
+  }
+
+};
+
 var Video = {
   
   initVideos: function() {
@@ -256,6 +292,17 @@ var Tabs = {
   }
 };
 
+var ToolTips = {
+
+  initToolTips: function() {
+        $(".tooltip").tipTip({
+      defaultPosition: "top",
+      attribute: "tooltip"
+    });
+  }
+
+};
+
 var App = {
 
   initDeleteLinks: function() {
@@ -296,4 +343,5 @@ $(document).ready(function() {
   Flash.setFlash();
   Video.initVideos();
   App.initDeleteLinks();
+  ToolTips.initToolTips();
 });
