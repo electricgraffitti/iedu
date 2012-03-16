@@ -1,0 +1,35 @@
+<div id="contact" class="content_block">
+	<div id="contact_form">
+		<header>Contact Imagine Education</header>
+			<%= form_tag :contact_form_path do %>
+				<div class="form_section">
+					<div class="field">
+						<%= label_tag "Name" %>
+						<%= text_field_tag :name, nil, :placeholder => "Enter Name" %>
+					</div>
+					<div class="field">
+						<%= label_tag "Email" %>
+						<%= text_field_tag :email, nil, :placeholder => "Enter Email" %>
+					</div>
+					<div class="field">
+						<%= label_tag "Phone" %>
+						<%= text_field_tag :phone, nil, :placeholder => "Enter Phone" %>
+					</div>
+					<div class="field">
+						<%= label_tag "Reason" %>
+						<%= text_field_tag :reason %>
+					</div>
+				</div>
+				<div class="form_section">
+					<div class="field">
+						<%= label_tag "Comments" %>
+						<%= text_area_tag :comments %>
+					</div>
+					<div class="field">
+						<%= submit_tag "Send Info", :class => "button blue_button" %>
+					</div>
+				</div>
+			<% end %>
+		<footer>Your story begins here.</footer>
+	</div>
+</div>

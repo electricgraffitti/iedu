@@ -2,7 +2,7 @@
 /*************************************************************************************************** GENERAL ************/
 #hd {position: relative;height: 180px;}
 #logo {position:absolute; left: 50%; margin-left:-188px;bottom: -33px; width: 375px; height: 150px; z-index: 2; text-indent: -9999em; background: transparent url(/images/common/top_bar/imagine_logo.png) 0px 0px no-repeat;}
-#bd {position: relative;height: 480px;padding: 35px 0px;}
+#bd {position: relative;height: 540px;padding: 35px 0px;}
 .bar {
 	position: absolute;
 	width: 960px;
@@ -41,7 +41,7 @@
 	border-radius: 0px 0px 10px 10px;
 }
 #bottom_bar.bar span#footer_logo {display:block;position: absolute; left: 50%; margin-left: -129px; width: 258px; height:35px; background: transparent url(/images/common/bottom_bar/story-footer-text.png) 0px 0px no-repeat;}
-.content_block {position: relative; width: 960px; height: 480px; overflow:hidden;}
+.content_block {position: relative; width: 960px; height: 540px; overflow:hidden;}
 .footer_nav {position: relative; float:left; height: 35px;padding: 0px; margin: 0px;}
 #nav_left.footer_nav {width: 300px;}
 #nav_right.footer_nav {width: 240px; float:right;}
@@ -49,5 +49,18 @@
 .footer_nav li a {position: relative; float:left; text-decoration: none; display: block; color: #444; font-weight: 700; text-shadow: 0px 1px 0px #fff; width: 100%; text-align:center;}
 .footer_nav li a:hover {color:#0066b3;}
 #copyright {position: relative; margin: 0px auto; font-size:11px; color:#aaa; display: block; margin-top: 10px;}
-/************************************************************************************************************************/
-/*************************************************************************************************** INDEX **************/
+
+#about {background: url(/images/panels/about_bg_panel.png) 0px 0px no-repeat}
+#about .about_header {position: absolute; left: 50%; margin-left: -260px; width: 520px; height: 30px; padding: 30px 0px;}
+#contact header, #about .about_header {padding: 20px 0px; font-size: 34px; color:#fff; text-shadow: 0px 1px 0px #000; }
+#contact_form {position: relative; float:left; margin: 40px; width: 880px;}
+#contact {position: relative; float:left; background: url(/images/panels/general_blue_bg.png) 0px 0px no-repeat;}
+#contact form {position: relative; float:left; width: 880px; height: 300px;}
+#contact header {padding-left: 60px; width: 820px; font-weight: 700;}
+.field, label, input, textarea {position: relative; width: 300px;}
+textarea {width: 290px;}
+label, input, textarea {color:#444;}
+#contact textarea {height: 156px;}
+#contact label {color:#fff; text-shadow: 0px 1px 0px #000; }
+.form_section {position: relative; float:left; width: 380px; padding: 0px 0px 0px 60px;}
+#contact footer {position: relative; float:left; width: 880px; text-align: center; color:#fff; text-shadow: 0px 1px 0px #000; font-size: 24px;}

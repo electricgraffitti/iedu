@@ -19,4 +19,9 @@ class ImagineController < ApplicationController
   	
   end
 
+  def contact_submit
+    AppMailer.contact_mailer(params).deliver
+    redirect_to(:back, :notice => "Your inquiry has been sent. Thank you.")
+  end
+
 end

@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Imagine Education Admin Email</title>
+  </head>
+
+  <body>
+    <style>
+      body {background-color:#ffffff;font-size:12px;}
+      table.white {background-color:#ffffff;}
+      h1 {margin-bottom: 2px; margin-left:63px;}
+      h2 {margin-top: 0px;margin-bottom: 2px;}
+      h3 {margin-top: 0px;margin-bottom: 2px;}
+      h4 {margin-top: 0px;margin-bottom: 2px;}
+      h5 {margin-top: 4px;margin-bottom: 0px;}
+      div {margin-top: 0px;}
+      a {margin-top:0px;border: none;text-decoration: none;}
+    </style>
+    <table style="width: 600px;" align="center" bgcolor="#ffffff"  cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td style="width: 600px;" width="600">
+            <!-- Main Content Area --> 
+            <table style="width: 600px; background: #ffffff;" bgcolor="#ffffff" cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td style="width: 600px;" width="600">
+                    <h1 style="font-family: helvetica,arial,sans-serif; margin-left: 0px; font-weight: 100; color: #000000; font-size: 33px; line-height: 33px; text-align: center">Imagine Education Inquiry<br />    
+                    </h1>
+                    <img style="border: none; margin-top: 20px;" src="http://dl.dropbox.com/u/3105141/C2CDN/Ko/graphics/email/purple_splat.png" width="628" height="20" />
+                  </td>
+                </tr> 
+              </tbody>
+            </table>
+            <!-- end Banner --> 
+
+            <!-- Content Area--> 
+            <table style="width: 600px;" align="center" bgcolor="#fefefe" border="0" cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td>
+                    <table style="width: 600px; margin-top: 2px;" align="center" bgcolor="#fefefe" border="0" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <p style="font-family: helvetica,arial,sans-serif; font-size: 12px; margin-top: 25px; margin-right: 50px; margin-left: 40px; color: #5f6062">
+                           		You have an Imagine Education contact inquiry.
+                            </p>
+                            <ul style="font-family: helvetica,arial,sans-serif; font-size: 12px; margin-top: 25px; margin-right: 50px; margin-left: 40px; color: #5f6062">
+                              <li>Name: <%= @params["name"] %> </li>
+                              <li>Email: <%= @params["email"] %> </li>
+                              <li>Phone: <%= @params["phone"]%> </li>
+                              <li>Reason: <%= @params["reason"] %> </li>
+                              <li>Comments: <p><%= @params["comments"] %></p></li>
+                            </ul>
+                            <p style="font-family: helvetica,arial,sans-serif; font-size: 10px; margin-top: 25px; margin-right: 50px; margin-left: 40px; color: #bbbbbb">
+                            	Love your Developer!
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+<!-- end Content Area -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- footer link -->
+    <table style="width: 600px;" align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td style="text-align: right; height: 30px;">
+            <a style="font-family: helvetica,arial,sans-serif; font-size: 14px; color: #0078ae" href="http://www.kosjourney.com">
+              www.imagineeducation.org
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
