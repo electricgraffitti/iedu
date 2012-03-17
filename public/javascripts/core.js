@@ -75,7 +75,6 @@ var FormFuncs = {
       return true;
     }
   }
-
 };
 
 var PanelFader = {
@@ -111,78 +110,63 @@ var PanelFader = {
     panelWrap.append(firstPanel);
     PanelFader.transitionPanels(panelWrap.find(".fade_panel"));
   }
-
 };
+
+var PanelScroller = {
+
+  verticalScroller: function() { 
+    $("#vert_scroller").simplyScroll({
+      customClass: 'vert',
+      orientation: 'vertical',
+            auto: false,
+            manualMode: 'loop',
+      frameRate: 20,
+      speed: 5
+    });
+  },
+}
 
 var Video = {
   
   initVideos: function() {
-    Video.triggerVideo();
+    Video.injectPlayer();
   },
 
-  triggerVideo: function() {
-    var triggerLink = $(".user_video_trigger");
+  injectPlayer: function() {
+    var playerWrapper = $(".video_container"),
+        videoUrl = playerWrapper.data("videourl"),
+        thumbUrl = playerWrapper.data("thumburl"),
+        player = Video.setupVideoPanelHtml();
 
-    triggerLink.on("click", function() {
-      var url = $(this).data("url"),
-          thumb = $(this).data("thumb");
+    player.find("source").attr("src", videoUrl);
+    player.find("video").attr("poster", thumbUrl);
 
-      Video.playVideo(url, thumb);
-    });
+    playerWrapper.append(player);
+
+    Video.setupTriggers();
+
   },
 
-  closeVideo: function() {
-    var closeLink = $(".close_link");
-
-    closeLink.on("click", function(e) {
-      var playerWrapper = $(this).siblings("#player");
-
-      playerWrapper.html("");
-      $.mask.close();
-      $(this).remove();
-      e.preventDefault();
-    });
+  setupVideoPanelHtml: function() {
+    var videoPanel = $('<div id="video_player" class="hidden"><video id="demo_reel_video" class="video-js vjs-default-skin" controls preload="auto" width="960" height="540" poster="" data-setup="{}"><source src="" type="video/mp4"></video></div>');
+    return videoPanel;
   },
 
-  playVideo: function(videoUrl,videoThumbUrl) {
-    var playerWindow = $("#player"),
-        playerWrap = playerWindow.parent();
+  setupTriggers: function() {
+    var triggers = $(".video_trigger");
 
-    playerWrap.expose({
-      color: '#000',
-      loadSpeed: 200,
-      opacity: 0.9,
-      closeOnClick: false
+    triggers.on("click", function() {
+      var player = _V_("demo_reel_video");
+          playerHtml = $("#video_player");
+
+      playerHtml.removeClass("hidden");
+      console.log(player);
+      player.play();
+
     });
 
-    playerWrap.addClass("center_wrap");
-    playerWrap.removeAttr("style");
-    playerWrap.append("<div id='close_link' class='close_link close'></div>");
-    
-    flowplayer("player", "/flowplayer/flowplayer-3.2.7.swf", {
-      clip: {
-        url: videoUrl,
-        scaling: 'orig'
-      },
-      plugins: {
-        controls: {
-          url: '/flowplayer/flowplayer.controls-3.2.5.swf',
-          playlist: false,
-          backgroundColor: '#000', 
-          time: false,
-          fullscreen: true,
-          volume: false,
-          bufferColor: '#666666',
-          buttonColor: '#666666',
-          tooltips: {
-            buttons: true, 
-            fullscreen: 'Fullscreen' 
-          } 
-        }
-      }
-    });
-    Video.closeVideo();
   }
+
 };
 
 var Modal = {
@@ -300,7 +284,6 @@ var ToolTips = {
       attribute: "tooltip"
     });
   }
-
 };
 
 var App = {
@@ -341,7 +324,6 @@ var App = {
 $(document).ready(function() {
   Flash.injectFlashBox();
   Flash.setFlash();
-  Video.initVideos();
   App.initDeleteLinks();
   ToolTips.initToolTips();
 });

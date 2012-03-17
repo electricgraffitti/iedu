@@ -7,7 +7,7 @@
 	position: absolute;
 	width: 960px;
 	height: 35px;
-	z-index: 1;
+	z-index: 5;
 	background: #eeeeee; /* Old browsers */
 	background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
@@ -54,7 +54,7 @@
 #about .about_header {position: absolute; left: 50%; margin-left: -260px; width: 520px; height: 30px; padding: 30px 0px;}
 #contact header, #about .about_header {padding: 20px 0px; font-size: 34px; color:#fff; text-shadow: 0px 1px 0px #000; }
 #contact_form {position: relative; float:left; margin: 40px; width: 880px;}
-#contact {position: relative; float:left; background: url(/images/panels/general_blue_bg.png) 0px 0px no-repeat;}
+#contact {position: relative; float:left; background: url(/images/panels/about_bg_panel.png) 0px 0px no-repeat;}
 #contact form {position: relative; float:left; width: 880px; height: 300px;}
 #contact header {padding-left: 60px; width: 820px; font-weight: 700;}
 .field, label, input, textarea {position: relative; width: 300px;}

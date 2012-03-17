@@ -1,15 +1,21 @@
 <div id="projects" class="content_block">
-	<div id="scroll_panel_wrap">
-		<ul id="scroll_panel">
-			<li class="panel">
-				<%= image_tag("/images/panels/product_panel1.png") %>
-			</li>
-			<li class="panel">
-				<%= image_tag("/images/panels/product_panel2.png") %>
-			</li>
-			<li class="panel">
-				<%= image_tag("/images/panels/product_panel3.png") %>
-			</li>
-		</ul>
-	</div>
+	<ul id="vert_scroller">
+		<li class="panel">
+			<%= image_tag("/images/panels/product_panel1.png") %>
+		</li>
+		<li class="panel">
+			<%= image_tag("/images/panels/product_panel2.png") %>
+		</li>
+		<li class="panel">
+			<%= image_tag("/images/panels/product_panel3.png") %>
+		</li>
+	</ul>
 </div>
+
+<% content_for :javascripts do %>
+	<script>
+   $(function() {
+     PanelScroller.verticalScroller();
+   });
+	</script>
+<% end %>

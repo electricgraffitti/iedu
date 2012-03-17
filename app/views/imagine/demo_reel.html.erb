@@ -1,3 +1,11 @@
-<div id="demo_reel" class="content_block">
+<div id="demo_reel" class="content_block video_trigger video_container" data-videourl="https://s3.amazonaws.com/imagineassets/generalvideos/demo_reel.mp4" data-videothumburl="">
 	<%= image_tag("/images/panels/demo_reel.png") %>
 </div>
+
+<% content_for :javascripts do %>
+	<script>
+   $(function() {
+     Video.initVideos();
+   });
+	</script>
+<% end %>
