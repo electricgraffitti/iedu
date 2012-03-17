@@ -3,6 +3,6 @@ class AppMailer < ActionMailer::Base
 
   def contact_mailer(params)
     @params = params
-    mail(:to => "support@cube2media.com", :subject => "Imagine Education Inquiry")
+    mail(:to => "scott@imagineeducation.org", :subject => "Imagine Education Inquiry")
   end
 end
