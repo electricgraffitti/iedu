@@ -10,8 +10,7 @@ module Iedu
   class Application < Rails::Application
 
     # don't attempt to auto-require the moonshine manifests into the rails env
-    config.paths['app/manifests'] = 'app/manifests'
-    config.paths['app/manifests'].skip_eager_load!
+    Rails.configuration.paths.app.manifests('app/manifests').skip_eager_load!
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
