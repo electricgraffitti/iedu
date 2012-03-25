@@ -28,11 +28,13 @@
 :deploy_to: /var/www/apps/iedu
 
 # Primary domain application will be accessed as 
-:domain: imagineeducation.org
+:domain: imagineeducationstudios.com
 
 # Domain aliases for application. One common use of this is for asset hosts.
 :domain_aliases:
+  - imagineeducation.org
   - www.imagineeducation.org
+  - www.imagineeducationstudios.com
 
 # Source control management to use. Defaults to git.
 # If you change this value, you will need to run: cap vcs:install
