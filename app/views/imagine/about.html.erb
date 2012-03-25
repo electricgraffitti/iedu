@@ -1,14 +1,60 @@
 <div id="about" class="content_block">
 	<p class="about_header">Imagine Education is about Story.</p>
 	<ul id="vert_scroller">
-		<li class="panel">
-			<%= image_tag("/images/panels/about_panel1.png") %>
+		<li class="panel top_padding">
+			<p>Imagine Education is founded on the idea that pretend play and storytelling, the oldest architectures of human learning, transforms student attitudes, improve test scores and establish a solid foundation for future learning.
+			</p>
+			<p>
+				Through immersive environments from multi-media platforms to live forums, Imagine Education uses the power of story to create dialogue and experience to facilitate a paradigm shift resulting in systematic change.  Scott Laidlaw, Ed.D. and Jennifer Harris, CPA, blended the worlds of education and business in 2009, to establish a dynamic organization that is capturing, and sharing, the big stories in education.
+			</p>
 		</li>
 		<li class="panel">
-			<%= image_tag("/images/panels/about_panel2.png") %>
+			<div class="bio_segment">
+				<div class="img_wrap">
+					<%= image_tag("bio_avatars/scott.png") %>
+				</div>
+				<div class="bio_content">
+					<header class="bio_header">Storyteller. Game Designer. Education Advocator.</header>
+					<article class="bio">Scott has gained 14 years of in-classroom teaching experience at the elementary, secondary and university levels, since earning his doctoral degree in Education from the University of Northern Colorado. While teaching middle school, he developed seven story-based, in-classroom math games with historical fiction themes that became the focal point of his classroom curriculum. Scott strives to support educators and educational leadership in transforming the underlying the pedagogy of their classrooms.
+					</article>
+					<footer>
+						<header class="bio_footer_header">Scott Laidlaw, Ed.D., CEO & Co-Founder</header>
+						<footer class="bio_email">Contact: <%= mail_to "scott@imagineeducation.org", "scott@imagineeducation.org" %> </footer>
+					</footer>
+				</div>
+			</div>
+			<div class="bio_segment">
+				<div class="img_wrap">
+					<%= image_tag("bio_avatars/jen.png") %>
+				</div>
+				<div class="bio_content">
+					<header class="bio_header">Systems Thinker. Visionary. Catalyst.</header>
+					<article class="bio">
+						Jen holds 18 years of diversified management experience in finance and operations, with a special emphasis on high tech software development companies. She is a CPA and CMA, with two Masters degrees in Business and Conscious Evolution. Jen is a catalyst for transforming educational thought and programs through multi-media technologies, preparing next generation learners for our global economy.
+					</article>
+					<footer>
+						<header class="bio_footer_header">Jennifer Lightwood, Executive Producer & Co-Founder</header>
+						<footer class="bio_email">Contact: <%= mail_to "jennifer@imagineeducation.org", "jennifer@imagineeducation.org" %> </footer>
+					</footer>
+				</div>
+			</div>
 		</li>
 		<li class="panel">
-			<%= image_tag("/images/panels/about_panel3.png") %>
+			<div class="bio_segment">
+				<div class="img_wrap">
+					<%= image_tag("bio_avatars/martha.png") %>
+				</div>
+				<div class="bio_content">
+					<header class="bio_header">Writer. Researcher. Social Activist</header>
+					<article class="bio">
+						Martha has spent over a decade in the nonprofit sector, developing a strong background in environmental outreach, experiential education, and STEM programming for girls in diverse roles within a range of organizations. She holds a Masters Degree in organizational management, with experience in outcomes-based program development and evaluation. Martha endeavors to leverage innovative pedagogy to transform how students, and society, comprehend math and science in everyday life.
+					</article>
+					<footer>
+						<header class="bio_footer_header">Martha Riecks, Director of Communication & Outreach</header>
+						<footer class="bio_email">Contact: <%= mail_to "martha@imagineeducation.org", "martha@imagineeducation.org" %> </footer>
+					</footer>
+				</div>
+			</div>
 		</li>
 	</ul>
 </div>
