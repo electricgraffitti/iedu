@@ -49,7 +49,7 @@
 .footer_nav li {position: relative; float:left; list-style-type: none; padding: 9px 10px; width: 100px;}
 .footer_nav li a {position: relative; float:left; text-decoration: none; display: block; color: #444; font-weight: 700; text-shadow: 0px 1px 0px #fff; width: 100%; text-align:center;}
 .footer_nav li a:hover {color:#0066b3;}
-#copyright {position: relative; margin: 0px auto; font-size:11px; color:#aaa; display: block; margin-top: 10px;}
+#copyright {position: relative; margin: 0px auto 50px; font-size:11px; color:#aaa; display: block; margin-top: 10px;}
 
 #index h1 {position: absolute; top: 25px; left: 25px; font-size: 36px; color:#fff; font-weight: bold; text-shadow: 2px 2px 2px #000;}
 #about {background: url(/images/panels/about_bg_panel.png) 0px 0px no-repeat}
