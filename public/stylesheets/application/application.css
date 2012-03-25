@@ -3,6 +3,7 @@
 #hd {position: relative;height: 180px;}
 #logo {position:absolute; left: 50%; margin-left:-188px;bottom: -33px; width: 375px; height: 150px; z-index: 2; text-indent: -9999em; background: transparent url(/images/common/top_bar/imagine_logo.png) 0px 0px no-repeat;}
 #bd {position: relative;height: 540px;padding: 35px 0px;}
+#imaginelearning {position: absolute; right:0px; top: -20px; color: #444; text-decoration: none;}
 .bar {
 	position: absolute;
 	width: 960px;
@@ -50,6 +51,7 @@
 .footer_nav li a:hover {color:#0066b3;}
 #copyright {position: relative; margin: 0px auto; font-size:11px; color:#aaa; display: block; margin-top: 10px;}
 
+#index h1 {position: absolute; top: 25px; left: 25px; font-size: 36px; color:#fff; font-weight: bold; text-shadow: 2px 2px 2px #000;}
 #about {background: url(/images/panels/about_bg_panel.png) 0px 0px no-repeat}
 #about .about_header {position: absolute; left: 50%; margin-left: -260px; width: 520px; height: 30px; padding: 30px 0px;}
 #contact header, #about .about_header {padding: 20px 0px; font-size: 34px; color:#fff; text-shadow: 0px 1px 0px #000; }

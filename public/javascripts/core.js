@@ -160,7 +160,6 @@ var Video = {
           playerHtml = $("#video_player");
 
       playerHtml.removeClass("hidden");
-      console.log(player);
       player.play();
 
     });
