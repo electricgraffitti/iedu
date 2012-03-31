@@ -3,8 +3,8 @@ var Navigation = {
 
   setCurrentNav: function() {
     var url = location.pathname,
-        all_links = $('ul#main_nav li'),
-        current_link = $('ul#main_nav li a[href$="' + url + '"]'),
+        all_links = $('#top_bar ul li'),
+        current_link = $('#top_bar ul li a[href$="' + url + '"]'),
         active_link = current_link.parent("li");
 
     if (url == "/") {

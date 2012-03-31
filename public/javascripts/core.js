@@ -89,7 +89,7 @@ var PanelFader = {
   },
 
   showFirstPanel: function(panels) {
-    panels.eq(0).fadeIn();
+    panels.eq(0).fadeIn(2000);
     PanelFader.transitionPanels(panels);
   },
 
@@ -97,8 +97,8 @@ var PanelFader = {
     var firstPanel = panels.eq(0),
         secondPanel = panels.eq(1);
 
-    secondPanel.delay(5000).fadeIn();
-    firstPanel.delay(5000).fadeOut(500, function() {
+    secondPanel.delay(7000).fadeIn(2000);
+    firstPanel.delay(7000).fadeOut(2000, function() {
       PanelFader.shiftPanels(panels, firstPanel);
     });
   },
@@ -125,6 +125,29 @@ var PanelScroller = {
     });
   },
 }
+
+var PanelSwitcher = {
+
+  defaults: {
+    width: 960,
+    height: 540
+  },
+
+  initPanelSwitcher: function() {
+    var panelWrap = $("#vert_scroller"),
+        panel = $(".panel"),
+        panels = panelWrap.find("li"),
+        topArrow = $('<div class="simply-scroll-back simply-scroll-btn simply-scroll-btn-up"></div>'),
+        bottomArrow = $('<div class="simply-scroll-forward simply-scroll-btn simply-scroll-btn-down"></div>');
+
+
+    panelWrap.append(topArrow).append(bottomArrow);
+    panelWrap.css({width: PanelSwitcher.defaults.width, height: PanelSwitcher.defaults.height, overflow: "hidden"});
+
+  }
+
+
+};
 
 var Video = {
   

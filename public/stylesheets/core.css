@@ -578,7 +578,8 @@ versions are included although they are not used in this example */
 .simply-scroll-btn-up{right:45px;top:45px;background-position: -6px -4px;}
 .simply-scroll-btn-up.disabled{background-position:-6px -4px !important;}
 .simply-scroll-btn-up:hover{background-position:-6px -4px;}
-.simply-scroll-btn-down{right:45px;bottom:440px;background-position: -6px -61px;}
+/*.simply-scroll-btn-down{right:45px;bottom:440px;background-position: -6px -61px;}*/
+.simply-scroll-btn-down{right:45px;bottom:50px;background-position: -6px -61px;}
 .simply-scroll-btn-down.disabled{background-position:-6px -61px !important;}
 .simply-scroll-btn-down:hover{background-position:-6px -61px;}
 /* Custom class modifications - adds to / overrides above
