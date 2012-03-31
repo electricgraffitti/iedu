@@ -124,28 +124,104 @@ var PanelScroller = {
       speed: 5
     });
   },
-}
+};
 
 var PanelSwitcher = {
 
-  defaults: {
+  base: {
     width: 960,
-    height: 540
+    height: 540,
+    topArrow: $('<div id="up_arrow" class="simply-scroll-back simply-scroll-btn simply-scroll-btn-up"></div>'),
+    bottomArrow: $('<div id="down_arrow" class="simply-scroll-forward simply-scroll-btn simply-scroll-btn-down"></div>'),
+    events: "click",
+    speed: 500
   },
 
   initPanelSwitcher: function() {
     var panelWrap = $("#vert_scroller"),
-        panel = $(".panel"),
-        panels = panelWrap.find("li"),
-        topArrow = $('<div class="simply-scroll-back simply-scroll-btn simply-scroll-btn-up"></div>'),
-        bottomArrow = $('<div class="simply-scroll-forward simply-scroll-btn simply-scroll-btn-down"></div>');
+        panels = panelWrap.find("li");
 
+    PanelSwitcher.setStyles(panelWrap);
+    PanelSwitcher.initializePanels(panels);
+    PanelSwitcher.initializeNav(panelWrap);
+  },
 
-    panelWrap.append(topArrow).append(bottomArrow);
-    panelWrap.css({width: PanelSwitcher.defaults.width, height: PanelSwitcher.defaults.height, overflow: "hidden"});
+  setStyles: function(panelWrap) {
+    panelWrap.parent().append(PanelSwitcher.base.topArrow).append(PanelSwitcher.base.bottomArrow);
+    panelWrap.css({width: PanelSwitcher.base.width, height: PanelSwitcher.base.height, overflow: "hidden"});
+  },
+
+  initializePanels: function(panels) {
+    $(panels[0]).attr("id", "active_panel");
+    $(panels[1]).attr("id", "next_panel");
+  },
+
+  initializeNav: function(panelWrap) {
+    var upArrow = $("#up_arrow"),
+        downArrow = $("#down_arrow");
+
+    downArrow.on(PanelSwitcher.base.events, function() {
+      PanelSwitcher.movePanelsUp(panelWrap);
+    });
+
+    upArrow.on(PanelSwitcher.base.events, function() {
+      PanelSwitcher.movePanelsDown(panelWrap);
+    });
+
+  },
+
+  movePanelsUp: function(panelWrap) {
+    var activePanel = $("#active_panel", panelWrap),
+        nextPanel = $("#next_panel", panelWrap),
+        previousPanel = $("#previous_panel", panelWrap),
+        lastPanel = $(".panels").last();
+
+    // Move Top Panel To Bottom
+    previousPanel.remove();
+    panelWrap.append(previousPanel);
+    
+    // Animate Panels into Place
+    PanelSwitcher.animatePanels("top", activePanel, nextPanel);
+
+    // Reset ID's
+    PanelSwitcher.resetIds("up", activePanel, nextPanel);
+
+  },
+
+  movePanelsDown: function(panelWrap) {
+    var activePanel = $("#active_panel"),
+        nextPanel = $("#next_panel"),
+        previousPanel = $("#previous_panel"),
+        lastPanel = $(".panels").last();
+
+    // Animate Panels into Place
+    PanelSwitcher.animatePanels("bottom", activePanel, nextPanel, previousPanel);
+
+    // Move Bottom Panel To Top
+    previousPanel.remove();
+    panelWrap.prepend(previousPanel);
+
+    // Reset ID's
+    PanelSwitcher.resetIds("down", activePanel, nextPanel, previousPanel);
+  },
+
+  animatePanels: function(direction, activePanel, nextPanel, previousPanel) {
+    activePanel.animate({direction : "-" + PanelSwitcher.base.height + "px"}, PanelSwitcher.base.speed);
+    nextPanel.animate({direction : "-" + PanelSwitcher.base.height + "px"}, PanelSwitcher.base.speed);
+  },
+
+  resetIds: function(direction, activePanel, nextPanel, previousPanel) {
+    if (direction === "up") {
+      activePanel.attr("id", "previous_panel");
+      nextPanel.attr("id", "active_panel");
+      nextPanel.next().attr("id", "next_panel");
+    } else {
+      activePanel.attr("id", "next_panel");
+      previousPanel.attr("id", "active_panel");
+      nextPanel.attr("id", "previous_panel");
+    }
 
   }
-
 
 };
 

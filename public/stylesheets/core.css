@@ -556,6 +556,10 @@ ul#fade_panel_wrap{position:relative;width:960px;}
 ul#fade_panel_wrap li.fade_panel{position:absolute;top:0px;left:0px;width:960px;height:480px;display:none;}
 
 /******************************************************************************************************************************/
+/******************************************************************************************* SWITCHER PANELS ******************/
+.panel {position: relative;}
+
+/******************************************************************************************************************************/
 /******************************************************************************************* SCROLL VERT PANELS ***************/
 /* Container DIV - automatically generated */
 .simply-scroll-container{position:relative;}
