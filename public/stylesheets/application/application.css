@@ -171,14 +171,20 @@ width: 960px;
 padding-top: 50px;
 height: 460px;
 }
-#about p {
-color: #fff;
+#about p.first, #about p.second {
+color: #000;
 width: 600px;
 margin: 0px auto;
-padding: 60px 0px 0px;
-text-align: left;
+text-align: justify;
 font-size: 16px;
 line-height: 21px;
+}
+#about p.first {
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+#about p.second {
+  padding: 0px;
 }
 #about .bio_segment {
 width: 650px;
@@ -196,25 +202,26 @@ height: 150px;
 position: relative;
 float: left;
 width: 520px;
+margin-top: 15px;
 }
 #about .bio_segment .bio_content article {
-color: #fff;
-width: 530px;
+color: #000;
+width: 510px;
 margin: 0px auto;
 padding: 0px 0px 10px;
-text-align: left;
+text-align: justify;
 font-size: 12px;
 line-height: 19px;
 }
 .bio_header {
-color: #fff;
+color: #000;
 font-size: 23px;
 text-shadow: 1px 1px 2px #000;
 text-align: left;
 padding-bottom: 5px;
 }
 #about .bio_segment .bio_content .bio_footer_header {
-color: #fff;
+color: #000;
 width: 520px;
 font-size: 17px;
 text-shadow: 1px 1px 2px #000;
@@ -222,17 +229,28 @@ text-align: right;
 padding-bottom: 5px;
 }
 #about .bio_segment .bio_content footer {
-color: #fff;
+color: #000;
 text-align: right;
+}
+#about .bio_segment .bio_content footer a, #about .bio_segment .bio_content footer a:visited {
+  color: #0000ff;
+}
+#about .bio_segment .bio_content footer a:hover {
+  color: #000000;
 }
 
 #contact header, #about .about_header {
 padding: 20px 0px;
 font-size: 34px;
-color: #fff;
 text-shadow: 0px 1px 0px #000;
 text-align: center;
-margin-top: 20px;
+}
+#about .about_header {
+  color: #000;
+  margin-top: 35px;
+}
+#contact header {
+color: #fff;
 }
 #contact_form {
 position: relative;
