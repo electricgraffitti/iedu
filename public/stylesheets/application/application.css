@@ -328,6 +328,12 @@ background: url(../../images/projects/core-bg.png) 0px 0px no-repeat;
 .panel.empires {
 background: url(../../images/projects/empires-bg.png) 0px 0px no-repeat;
 }
+.panel.story {
+ background: url(../../images/projects/bsp-bg.png) 0px 0px no-repeat; 
+}
+.panel.quest {
+  background: url(../../images/projects/quest-bg.png) 0px 0px no-repeat;
+}
 .image_wrap {
 width: 390px;
 height: 265px;
