@@ -97,8 +97,8 @@ var PanelFader = {
     var firstPanel = panels.eq(0),
         secondPanel = panels.eq(1);
 
-    secondPanel.delay(7000).fadeIn(2000);
-    firstPanel.delay(7000).fadeOut(2000, function() {
+    secondPanel.delay(3000).fadeIn(1000);
+    firstPanel.delay(3000).fadeOut(1000, function() {
       PanelFader.shiftPanels(panels, firstPanel);
     });
   },

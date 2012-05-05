@@ -241,7 +241,6 @@ text-align: right;
 #about .bio_segment .bio_content footer a:hover {
   color: #000000;
 }
-
 #contact header, #about .about_header {
 padding: 20px 0px;
 font-size: 34px;
@@ -348,6 +347,9 @@ margin-top: 100px;
 color: #fff;
 text-shadow: 0px 2px 2px #000;
 padding-bottom: 10px;
+}
+.copy_wrap h2 {
+  font-size: 19px;
 }
 .copy_wrap p {
 color: #fff;
