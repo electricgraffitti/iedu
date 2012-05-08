@@ -313,6 +313,7 @@ font-size: 24px;
 #projects .panel, .image_wrap, .copy_wrap, .panel_footer {
 position: relative;
 float: left;
+list-style: none;
 }
 #projects .panel {
 width: 960px;
