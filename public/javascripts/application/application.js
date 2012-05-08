@@ -16,6 +16,32 @@ var About = {
 
 };
 
+var Projects = {
+
+  togglePanels: function() {
+    var panels = $(".panel"),
+        firstPanel = panels.first(),
+        subNav = $("#sub_nav li a");
+
+    firstPanel.show();
+    subNav.first().addClass("active");
+
+    subNav.on("click", function(e) {
+      e.preventDefault();
+      var idVal = $(this).data("link"),
+          linkedPanel = $("#" + idVal);
+
+      panels.hide();
+      subNav.removeClass("active");
+      $(this).addClass("active");
+      linkedPanel.show();
+
+    });
+
+  },
+
+};
+
 var Navigation = {
 
   setCurrentNav: function() {

@@ -1,6 +1,13 @@
 <div id="projects" class="content_block">
+	<ul id="sub_nav">
+		<li><%= link_to "Ko's Journey", "", "data-link" => "kos_journey" %></li>
+		<li><%= link_to "Core Reaction", "", "data-link" => "core_reaction" %></li>
+		<li><%= link_to "Empires", "", "data-link" => "empires" %></li>
+		<li><%= link_to "Biggest Story Problem", "", "data-link" => "bsp" %></li>
+		<li><%= link_to "Quest for Furs", "", "data-link" => "qff" %></li>
+	</ul>
 	<ul id="vert_scroller">
-		<li class="panel ko">
+		<li id="kos_journey" class="panel first ko">
 			<!-- <div class="sub_nav">
 				<ul>
 					<li>Ko's Journey</li>
@@ -20,7 +27,7 @@
 				</p>
 			</div>
 		</li>
-		<li class="panel core">
+		<li id="core_reaction" class="panel core">
 			<div class="image_wrap">
 				<%= image_tag("/images/projects/core.png") %>
 			</div>
@@ -35,7 +42,7 @@
 				</p>
 			</div>
 		</li>
-		<li class="panel empires">
+		<li id="empires" class="panel empires">
 			<div class="image_wrap">
 				<%= image_tag("/images/projects/empires.png") %>
 			</div>
@@ -50,8 +57,7 @@
 				</p>
 			</div>
 		</li>
-		
-		<li class="panel story">
+		<li id="bsp" class="panel story">
 			<div class="image_wrap">
 				<%= image_tag("/images/projects/bsp.png") %>
 			</div>
@@ -66,7 +72,7 @@
 				</p>
 			</div>
 		</li>
-		<li class="panel quest">
+		<li id="qff" class="panel quest">
 			<div class="image_wrap">
 				<%= image_tag("/images/projects/quest.png") %>
 			</div>
@@ -87,8 +93,9 @@
 <% content_for :javascripts do %>
 	<script>
    $(function() {
-   		//PanelScroller.verticalScroller();
-     PanelSwitcher.initPanelSwitcher();
+   	Projects.togglePanels();
+   	// PanelScroller.verticalScroller();
+    // PanelSwitcher.initPanelSwitcher();
    });
 	</script>
 <% end %>
