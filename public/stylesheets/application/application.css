@@ -112,7 +112,7 @@ label, input, textarea {color:#444;}
 #contact footer {position: relative; float:left; width: 880px; text-align: center; color:#fff; text-shadow: 0px 1px 0px #000; font-size: 24px;}
 
 
-#projects .panel, .image_wrap, .copy_wrap, .panel_footer {position: relative; float: left;}
+#projects .panel, .image_wrap, .copy_wrap, .panel_footer {position: relative; float: left; list-style-type: none;}
 #projects .panel {width: 960px; height: 540px;}
 .panel.ko {background: url(../../images/projects/ko-bg.png) 0px 0px no-repeat;}
 .panel.core {background: url(../../images/projects/core-bg.png) 0px 0px no-repeat;}
