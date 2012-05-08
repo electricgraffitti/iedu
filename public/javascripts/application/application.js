@@ -1,4 +1,21 @@
 // ctrl + alt + f for quick formatter
+
+var About = {
+
+  togglePanels: function() {
+    var switcherLink = $("#panel_switcher"),
+        firstPanel = $(".first_panel"),
+        secondaryPanels = $(".secondary_panels");
+
+    switcherLink.on("click", function(e) {
+      e.preventDefault();
+      firstPanel.hide();
+      secondaryPanels.show();
+    });        
+  },
+
+};
+
 var Navigation = {
 
   setCurrentNav: function() {

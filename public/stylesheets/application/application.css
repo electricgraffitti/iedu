@@ -157,21 +157,23 @@ text-shadow: 2px 2px 2px #000;
 text-align: center;
 background: url(/images/panels/about_bg_panel.png) 0px 0px no-repeat
 }
+#about .secondary_panels { display: none; padding-top: 40px;}
+#panel_switcher { display: block; text-align: left; padding: 10px 0px; color: #0088cc;width: 600px; margin: 0px auto;}
 #about .about_header {
 position: absolute;
-left: 50%;
-margin-left: -260px;
-width: 520px;
+width: 960px;
 height: 30px;
 padding: 30px 0px;
 }
 #about ul {
 width: 960px;
 margin: 0px auto;
+height: 540px;
+overflow-x: none;
+overflow-y: auto;
 }
 #about ul li {
-width: 960px;
-padding-top: 50px;
+width: 945px;
 height: 460px;
 }
 #about p.first, #about p.second {
@@ -222,6 +224,7 @@ font-size: 23px;
 text-shadow: 1px 1px 2px #000;
 text-align: left;
 padding-bottom: 5px;
+width: 640px;
 }
 #about .bio_segment .bio_content .bio_footer_header {
 color: #000;
@@ -248,8 +251,11 @@ text-shadow: 0px 1px 0px #000;
 text-align: center;
 }
 #about .about_header {
+  width: 945px;
+  background: #fff;
   color: #000;
-  margin-top: 35px;
+  margin-top: 2px;
+  z-index: 2;
 }
 #contact header {
 color: #fff;

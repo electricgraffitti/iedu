@@ -222,7 +222,6 @@ var PanelSwitcher = {
     }
 
   }
-
 };
 
 var Video = {
@@ -264,7 +263,6 @@ var Video = {
     });
 
   }
-
 };
 
 var Modal = {

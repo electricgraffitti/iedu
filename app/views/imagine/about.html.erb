@@ -1,14 +1,15 @@
 <div id="about" class="content_block">
-	<p class="about_header">Imagine Education is about Story.</p>
+	<div class="about_header">Imagine Education is about Story.</div>
 	<ul id="vert_scroller">
-		<li class="panel top_padding">
+		<li class="panel first_panel top_padding">
 			<p class="first">Imagine Education is founded on the idea that pretend play and storytelling, the oldest architectures of human learning, transform student attitudes, improve test scores and establish a solid foundation for future learning.
 			</p>
 			<p class="second">
 				Through immersive environments, from multi-media platforms to live forums, Imagine Education uses the power of story to create dialogue and experience to facilitate a paradigm shift, resulting in systematic change. Scott Laidlaw, Ed.D. and Jennifer Lightwood, CPA, blended the worlds of education and business in 2009, to establish a dynamic organization that is capturing, and sharing, the big stories in education.
 			</p>
+			<%= link_to "Meet the Core Education Team", "", :id => "panel_switcher" %>
 		</li>
-		<li class="panel">
+		<li class="panel secondary_panels">
 			<div class="bio_segment">
 				<div class="img_wrap">
 					<%= image_tag("bio_avatars/scott.png") %>
@@ -39,7 +40,7 @@
 				</div>
 			</div>
 		</li>
-		<li class="panel">
+		<li class="panel secondary_panels">
 			<div class="bio_segment">
 				<div class="img_wrap">
 					<%= image_tag("bio_avatars/martha.png") %>
@@ -78,8 +79,9 @@
 <% content_for :javascripts do %>
 	<script>
    $(function() {
-     //PanelScroller.verticalScroller();
-     PanelSwitcher.initPanelSwitcher();
+   	About.togglePanels();
+     // PanelScroller.verticalScroller();
+     // PanelSwitcher.initPanelSwitcher();
    });
 	</script>
 <% end %>
