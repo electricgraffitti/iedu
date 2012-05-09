@@ -143,13 +143,12 @@ display: block;
 margin-top: 10px;
 }
 #index h1 {
-font-family: arial;
 position: absolute;
 top: 25px;
 left: 25px;
 font-size: 36px;
 color: #fff;
-font-weight: bold;
+font-weight: 500;
 text-shadow: 2px 2px 2px #000;
 }
 #projects li.panel {display: none;}
