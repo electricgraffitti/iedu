@@ -304,6 +304,12 @@ float: left;
 width: 380px;
 padding: 0px 0px 0px 60px;
 }
+.contact_info {
+color: #ffffff;
+text-align: center;
+font-size: 18px;
+
+}
 #contact footer {
 position: relative;
 float: left;
