@@ -6,14 +6,13 @@ height: 140px;
 }
 #logo {
 position: absolute;
-left: 50%;
-margin-left: -188px;
-bottom: -34px;
-width: 376px;
-height: 170px;
+left: 36%;
+top: 27px;
+width: 245px;
+height: 94px;
 z-index: 2;
 text-indent: -9999em;
-background: transparent url(/images/common/top_bar/imagine_logo_split.png) 0px 0px no-repeat;
+background: transparent url(/images/common/top_bar/imagine_raw_logo.png) 0px 0px no-repeat;
 }
 #bd {
 position: relative;
@@ -92,8 +91,8 @@ padding: 0px;
 margin: 0px;
 }
 #nav_left.footer_nav {
-width: 300px;
-margin-left: 10px;
+width: 600px;
+margin-left: 225px;
 }
 #nav_right.footer_nav {
 width: 240px;
@@ -327,6 +326,12 @@ position: relative;
 float: left;
 width: 380px;
 padding: 0px 0px 0px 60px;
+}
+.contact_info {
+color: #ffffff;
+text-align: center;
+font-size: 18px;
+
 }
 #contact footer {
 position: relative;
