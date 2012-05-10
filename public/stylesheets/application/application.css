@@ -177,7 +177,7 @@ text-decoration: none;
 }
 #about {
 text-align: center;
-background: url(/images/panels/about_bg_panel.png) 0px 0px no-repeat
+background: url(/images/panels/about_bg_panel_wm.png) 0px 0px no-repeat
 }
 #about .secondary_panels { display: none; padding-top: 40px;}
 #panel_switcher { display: block; text-align: left; padding: 10px 0px; color: #0088cc;width: 600px; margin: 0px auto;}
