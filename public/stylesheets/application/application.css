@@ -19,13 +19,6 @@ position: relative;
 height: 540px;
 padding: 35px 0px;
 }
-#imaginelearning {
-position: absolute;
-right: 0px;
-top: -20px;
-color: #444;
-text-decoration: none;
-}
 span.italic {
   font-style: italic;
 }
@@ -136,11 +129,22 @@ color: #015798;
 }
 #copyright {
 position: relative;
-margin: 0px auto 50px;
+margin: 0px auto 10px;
 font-size: 11px;
 color: #aaa;
 display: block;
 margin-top: 10px;
+}
+#learning_link {
+	color: #ffffff;
+	font-size: 10px;
+}
+#learning_link a {
+position: relative;
+margin: 0px auto 50px;
+font-size: 10px;
+color: #ffffff;
+margin-top: 20px;
 }
 #index h1 {
 position: absolute;

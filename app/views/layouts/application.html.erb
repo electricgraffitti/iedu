@@ -28,7 +28,7 @@
         Loading...
       </div>
       <div id="bd" class="content_wrapper">
-        <%= link_to "Not Affiliated with Imagine Learning", "http://www.imaginelearning.com", :target => "_blank", :id => "imaginelearning" %>
+        
         <div id="top_bar" class="bar">
           <%= render :partial => "layouts/footer_nav_left" %>
           <%#= render :partial => "layouts/footer_nav_right" %>
@@ -44,6 +44,8 @@
     <%# Footer %>
     <div id="mast_footer" class="content_wrapper">
       <span id="copyright">&copy; Imagine Education 2012. All Rights Reserved</span>
+      <span id="learning_link">Not affiliated with Imagine Learning <%= link_to "(www.imaginelearning.com)", "http://www.imaginelearning.com", :target => "_blank", :id => "imaginelearning" %></span>
+      
     </div>
     <%= render :partial => "layouts/cdn_scripts" %>
     <%= render :partial => "layouts/application/scripts" %>
