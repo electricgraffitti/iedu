@@ -6,6 +6,7 @@ Iedu::Application.routes.draw do
 	match "about-imagine-education" => "imagine#about", :as => :about
 	match "contact-imagine-education" => "imagine#contact", :as => :contact
 	match "contact-form" => "imagine#contact_submit", :as => :contact_form_path
+	match "consulting" => "imagine#consulting", :as => :consulting
 
   root :to => "imagine#index"
 

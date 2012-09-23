@@ -10,6 +10,10 @@ class ImagineController < ApplicationController
   def projects
   	
   end
+  
+  def consulting
+    
+  end
 
   def about
   	

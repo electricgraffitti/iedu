@@ -1,0 +1,56 @@
+<div id="projects" class="content_block">
+	<ul id="vert_scroller">
+		<li id="kos_journey" class="panel first consult">
+			<!-- <div class="sub_nav">
+				<ul>
+					<li>Ko's Journey</li>
+				</ul>
+			</div> -->
+			<div class="image_wrap">
+				<%= image_tag("/images/consulting.png") %>
+				<p class="consultant">Scott Laidlaw, Ed.D.</p>
+				<p class="consultant">
+				  Contact me <%= link_to "here", contact_path %> and let me show you how to  achieve real results in your school or district by building a solid math program. You can also download the free pdf <a href="/downloads/consulting.pdf", title="Consulting Information" target="_blank"> here</a> to learn more about our consulting services.
+				</p>
+
+			</div>
+			<div class="copy_wrap">
+				<h1>Consulting Service</h1>
+				<h2>Real Change Starts Here</h2>
+				<p>
+					My experience as a teacher for 11 years and middle school math teaching consultant, I've seen a wide array of different math programs and classes. The following consulting services are customized to meet the distinct needs of your organization.
+				</p>
+				<ul class="consultant">
+				  <li>
+				    Conduct an analysis of current practices &#38; present integrative teaching methods
+				  </li>
+				  <li>
+				    Help identify what tools &#38; resources teachers &#38; administrators have available
+				  </li>
+				  <li>
+				    Help teachers understand how their practices and assessment affect learning
+				  </li>
+				  <li>
+				    Work with students in developing peer learning and self-directed projects
+				  </li>
+				  <li>
+				    Facilitate playing rich, story based math games for teachers and students
+				  </li>
+				  <li>
+				    Follow-up with benchmark reviews &#38; next steps including innovative programs
+				  </li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+
+<% content_for :javascripts do %>
+	<script>
+   $(function() {
+   	Projects.togglePanels();
+   	// PanelScroller.verticalScroller();
+    // PanelSwitcher.initPanelSwitcher();
+   });
+	</script>
+<% end %>

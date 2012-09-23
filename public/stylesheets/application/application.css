@@ -283,6 +283,23 @@ text-align: center;
   margin-top: 2px;
   z-index: 2;
 }
+ul.consultant {
+	padding-left: 15px;
+	margin-top: 10px;
+}
+ul.consultant li {
+	color: #ffffff;
+	list-style-type: disc;
+	margin-bottom: 5px;
+	font-size: 13px;
+}
+p.consultant {
+	color: white;
+	font-size: 16px;
+	line-height: 20px;
+	padding-top: 10px;
+	text-align: justify;
+}
 #contact header {
 color: #fff;
 }
@@ -354,6 +371,9 @@ list-style: none;
 #projects .panel {
 width: 960px;
 height: 540px;
+}
+.panel.consult {
+	background: url(../../images/consulting_bg.png) 0px 0px no-repeat;
 }
 .panel.ko {
 background: url(../../images/projects/ko-bg.png) 0px 0px no-repeat;
